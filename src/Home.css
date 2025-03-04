@@ -1,0 +1,133 @@
+/* home-page-container */
+.home-page-container {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+.hero-section-home {
+  background-image: url("../src/img/cafe13.jpg"); /* Cambia por la imagen que desees */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  border-radius: 5px;
+  padding: 200px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Fondo oscuro para mejorar legibilidad */
+.hero-section-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: black;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.wide-card-home {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Ajuste del tamaño del Carousel */
+.carousel-inner img {
+  width: 100%; /* Asegura que las imágenes dentro del carrusel ocupen el 100% del ancho */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-width: none; /* Elimina cualquier límite máximo de ancho */
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel {
+  max-width: 100%; /* Esto hará que ocupe el 100% del ancho disponible */
+  margin: 0 auto; /* Centra el carrusel en el contenedor */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero-section-home h1 {
+    font-size: 2rem;
+  }
+  .hero-section-home p {
+    font-size: 1rem;
+  }
+
+  .card {
+    margin-bottom: 15px;
+  }
+
+  /* Ajuste del tamaño del Carousel en pantallas pequeñas */
+  .carousel-inner img {
+    max-width: 100%;
+  }
+}
+
+.btn-primary,
+.btn-success {
+  font-size: 1rem;
+  padding: 3px 10px;
+  width: auto;
+  height: 45px;
+  min-width: 120px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+  background-color: rgb(245, 99, 37);
+  transform: scale(1.05);
+}
